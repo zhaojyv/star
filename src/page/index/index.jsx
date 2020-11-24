@@ -1,5 +1,5 @@
 import React from "react";
-import { TabBar } from "antd-mobile";
+// import { TabBar } from "antd-mobile";
 
 import home from "../../static/img/home.png";
 import home_fill from "../../static/img/home_fill.png";
@@ -10,7 +10,13 @@ import jiaoyi_fill from "../../static/img/jiaoyi_fill.png";
 import mine from "../../static/img/mine.png";
 import mine_fill from "../../static/img/mine_fill.png";
 
-import "./index";
+import "./index.scss";
+
+import Home from "../components/home/index";
+import Assets from "../components/assets/index";
+import Transaction from "../components/transaction/index";
+import Mine from "../components/mine/index";
+
 class Index extends React.Component {
   constructor(props) {
     super(props);
@@ -46,14 +52,35 @@ class Index extends React.Component {
       ],
     };
   }
-
+  tabChange = (id) => {
+    this.setState({
+      selectedTab: id,
+    });
+  };
   render() {
+    let CurrentBox = null;
+    if (this.state.selectedTab === 1) {
+      CurrentBox = Home;
+    } else if (this.state.selectedTab === 2) {
+      CurrentBox = Assets;
+    } else if (this.state.selectedTab === 3) {
+      CurrentBox = Transaction;
+    } else {
+      CurrentBox = Mine;
+    }
     return (
       <div className="main">
+        <div className="tanContent">
+          <CurrentBox></CurrentBox>
+        </div>
         <div className="bar">
           {this.state.bar.map((item, index) => {
             return (
-              <div className="item" key={index}>
+              <div
+                className="item"
+                key={index}
+                onClick={() => this.tabChange(item.id)}
+              >
                 <div className="img">
                   {this.state.selectedTab === item.id ? (
                     <img src={item.selectIcon} alt="" />
@@ -61,7 +88,11 @@ class Index extends React.Component {
                     <img src={item.icon} alt="" />
                   )}
                 </div>
-                <p>{item.text}</p>
+                {this.state.selectedTab === item.id ? (
+                  <p className="active">{item.text}</p>
+                ) : (
+                  <p>{item.text}</p>
+                )}
               </div>
             );
           })}
