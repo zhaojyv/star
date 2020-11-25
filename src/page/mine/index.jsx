@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { Icon } from "antd-mobile";
-import Logo from "../../../static/img/logo.png";
-import RightIcon from "../../../static/img/icon_right.png";
-
-import TeamIcon from "../../../static/img/icon_team.png";
-import SetIcon from "../../../static/img/icon_set.png";
-import JiaoyiIcon from "../../../static/img/icon_jiaoyi.png";
-import YaoqingIcon from "../../../static/img/icon_yaoqing.png";
-
+import Logo from "../../static/img/logo.png";
+import RightIcon from "../../static/img/icon_right.png";
+import TeamIcon from "../../static/img/icon_team.png";
+import SetIcon from "../../static/img/icon_set.png";
+import JiaoyiIcon from "../../static/img/icon_jiaoyi.png";
+import YaoqingIcon from "../../static/img/icon_yaoqing.png";
+import BgImg from "../../static/img/bg.png";
 
 
 import "./index.scss";
@@ -26,7 +25,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="main mine">
-        <div className="info" onClick={()=> this.infoHnadle()}>
+        <div className="info" style={{backgroundImage:`url(${BgImg})`}}onClick={()=> this.infoHnadle()}>
           <div className="img">
             <img src={Logo} alt="" />
           </div>
@@ -35,7 +34,7 @@ export default class Home extends Component {
             <div className="phone">152****3696</div>
           </div>
           <div className="icon">
-            <Icon type="right" size="28" color="#ffffff" />
+            <Icon type="right" size="32" color="#ffffff" />
           </div>
         </div>
         <div className="list">

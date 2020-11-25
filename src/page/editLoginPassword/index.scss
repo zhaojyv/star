@@ -1,0 +1,63 @@
+.editLoginPassword {
+  .form {
+    padding: 0 15px;
+    .formItem {
+      padding-top: 20px;
+      border-bottom: 2px solid #eeeeee;
+      p {
+        font-size: 15px;
+        color: #111111;
+        font-weight: bold;
+      }
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          padding-right: 56px;
+          box-sizing: border-box;
+          height: 56px;
+          line-height: 56px;
+          font-size: 20px;
+        }
+        .icon {
+          position: absolute;
+          height: 100%;
+          right: 0;
+          width: 22px;
+          padding:0 15px;
+          z-index: 2;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          img {
+            width: 22px;
+            height: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .submit {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    button {
+      height: 50px;
+      width: 100%;
+      line-height: 50px;
+      border-radius: 8px;
+      background: #027aff;
+      font-size: 20px;
+      color: #ffffff;
+    }
+    :disabled {
+      opacity: 0.5;
+    }
+  }
+}

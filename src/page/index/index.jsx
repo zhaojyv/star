@@ -12,10 +12,10 @@ import mine_fill from "../../static/img/mine_fill.png";
 
 import "./index.scss";
 
-import Home from "../components/home/index";
-import Assets from "../components/assets/index";
-import Transaction from "../components/transaction/index";
-import Mine from "../components/mine/index";
+import Home from "../home/index";
+import Assets from "../assets/index";
+import Transaction from "../transaction/index";
+import Mine from "../mine/index";
 
 class Index extends React.Component {
   constructor(props) {
