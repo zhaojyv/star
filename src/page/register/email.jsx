@@ -1,29 +1,27 @@
 import React, { Component } from "react";
 import "./index.scss";
-import Head from "../../components/head/index";
+
 import EyeOpen from "../../static/img/eye_open.png";
 import EyeClose from "../../static/img/eye_close.png";
 import { testMobile } from "../../utils/index";
-let  time = null
-export default class Home extends Component {
+let time = null;
+export default class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mobile: "15239088356",
+      email: "",
       code: "",
       password: "",
-      passwordConfirm: "",
-      eye: [0, 0],
+      eye: 0,
       num: 60,
       time: null,
       send: false,
-      
     };
   }
   componentDidMount() {}
-  mobileChange = (e) => {
+  emailChange = (e) => {
     this.setState({
-      mobile: e.target.value,
+      email: e.target.value,
     });
   };
   codeChange = (e) => {
@@ -41,11 +39,9 @@ export default class Home extends Component {
       passwordConfirm: e.target.value,
     });
   };
-  changeHandle = (e, index, val) => {
-    console.log(index, val);
+  changeHandle = (e, val) => {
     let eye = this.state.eye;
-    eye[index] = val;
-    console.log(eye);
+    eye = val;
     this.setState({
       eye: eye,
     });
@@ -62,13 +58,12 @@ export default class Home extends Component {
       });
       time = setInterval(() => {
         if (num < 0) {
-          clearInterval(time)
+          clearInterval(time);
           this.setState({
             num: 60,
-            send:false,
-            time:null
+            send: false,
+            time: null,
           });
-          
         } else {
           this.setState({
             num: num--,
@@ -79,18 +74,16 @@ export default class Home extends Component {
   };
   render() {
     return (
-      <div className="main editTradePassword">
-        <Head title={"交易密码"}></Head>
+      <div>
         <div className="form">
           <div className="formItem">
-            <p>手机号</p>
+            <p>邮箱</p>
             <div className="input">
               <input
                 type="number"
-                maxLength="11"
-                placeholder="请输入手机号"
-                value={this.state.mobile}
-                onChange={(e) => this.mobileChange(e)}
+                placeholder="请输入邮箱"
+                value={this.state.email}
+                onChange={(e) => this.emailChange(e)}
               />
             </div>
           </div>
@@ -117,51 +110,18 @@ export default class Home extends Component {
             <p>支付密码</p>
             <div className="input">
               <input
-                type={this.state.eye[0] ? "text" : "password"}
+                type={this.state.eye? "text" : "password"}
                 maxLength="15"
                 placeholder="请输入密码"
                 value={this.state.password}
                 onChange={(e) => this.passwordChange(e)}
               />
-              {this.state.eye[0] ? (
-                <div
-                  className="icon"
-                  onClick={(e) => this.changeHandle(e, 0, 0)}
-                >
+              {this.state.eye ? (
+                <div className="icon" onClick={(e) => this.changeHandle(e, 0)}>
                   <img src={EyeClose} alt="" />
                 </div>
               ) : (
-                <div
-                  className="icon"
-                  onClick={(e) => this.changeHandle(e, 0, 1)}
-                >
-                  <img src={EyeOpen} alt="" />{" "}
-                </div>
-              )}
-            </div>
-          </div>
-          <div className="formItem">
-            <p>确认密码</p>
-            <div className="input">
-              <input
-                type={this.state.eye[1] ? "text" : "password"}
-                maxLength="15"
-                placeholder="请输入密码"
-                value={this.state.passwordConfirm}
-                onChange={(e) => this.passwordConfirmChange(e)}
-              />
-              {this.state.eye[1] ? (
-                <div
-                  className="icon"
-                  onClick={(e) => this.changeHandle(e, 1, 0)}
-                >
-                  <img src={EyeClose} alt="" />
-                </div>
-              ) : (
-                <div
-                  className="icon"
-                  onClick={(e) => this.changeHandle(e, 1, 1)}
-                >
+                <div className="icon" onClick={(e) => this.changeHandle(e, 1)}>
                   <img src={EyeOpen} alt="" />{" "}
                 </div>
               )}
@@ -172,14 +132,14 @@ export default class Home extends Component {
           <button
             disabled={
               !(
-                this.state.mobile.length > 0 &&
+                this.state.email.length > 0 &&
                 this.state.code.length > 0 &&
                 this.state.password.length > 0 &&
                 this.state.passwordConfirm.length > 0
               )
             }
           >
-            确定
+            手机注册
           </button>
         </div>
       </div>

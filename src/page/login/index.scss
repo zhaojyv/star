@@ -1,0 +1,114 @@
+.login{
+  background: #F6F7FB;
+
+    .top{
+        position: relative;
+        .bg{
+            width: 100%;
+            height: auto;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+
+        }
+        .logo{
+            width: 165px;
+            height: 53px;
+            z-index: 2;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            // border-bottom-left-radius:180px ;
+            // border-bottom-right-radius:180px ;
+
+        }
+    }
+    .content{
+        margin-top: -40px;
+        padding: 0 15px;
+        position: relative;
+        
+    }
+    .form {
+        background: #ffffff;
+        padding: 40px 15px;
+        border-radius: 10px;
+        .formItem {
+          padding-top: 20px;
+          border-bottom: 2px solid #eeeeee;
+          p {
+            font-size: 15px;
+            color: #111111;
+            font-weight: bold;
+          }
+          .input {
+            position: relative;
+            input {
+              width: 100%;
+              padding-right: 56px;
+              box-sizing: border-box;
+              height: 56px;
+              line-height: 56px;
+              font-size: 20px;
+            }
+            .icon {
+              position: absolute;
+              height: 100%;
+              right: 0;
+              width: 22px;
+              padding:0 15px;
+              z-index: 2;
+              top: 50%;
+              transform: translateY(-50%);
+              display: flex;
+              align-items: center;
+              img {
+                width: 22px;
+                height: 15px;
+              }
+            }
+            .code {
+              position: absolute;
+              height: 100%;
+              right: 0;
+              padding:0 15px;
+              z-index: 2;
+              top: 50%;
+              transform: translateY(-50%);
+              display: flex;
+              align-items: center;
+              button {
+                height: 100%;
+                background: transparent;
+                font-size:18px ;
+                color: #999999;
+              }
+            }
+          }
+        }
+        .operation{
+            margin: 25px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 16px;
+            color: #333333;
+        }
+        .submit {
+            width: 100%;
+            box-sizing: border-box;
+            button {
+              height: 50px;
+              width: 100%;
+              line-height: 50px;
+              border-radius: 8px;
+              background: #027aff;
+              font-size: 20px;
+              color: #ffffff;
+            }
+            :disabled {
+              opacity: 0.5;
+            }
+          }
+      }
+}

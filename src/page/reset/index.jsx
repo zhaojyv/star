@@ -9,6 +9,7 @@ export default class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+        account:'',
       mobile: "15239088356",
       code: "",
       password: "",
@@ -21,6 +22,11 @@ export default class Home extends Component {
     };
   }
   componentDidMount() {}
+  accountChange = (e) => {
+    this.setState({
+      account: e.target.value,
+    });
+  };
   mobileChange = (e) => {
     this.setState({
       mobile: e.target.value,
@@ -79,9 +85,21 @@ export default class Home extends Component {
   };
   render() {
     return (
-      <div className="main editTradePassword">
-        <Head title={"交易密码"}></Head>
+      <div className="main reset">
+        <Head title={""}></Head>
+        <div className="pageTitle">重置密码</div>
         <div className="form">
+        <div className="formItem">
+            <p>账号</p>
+            <div className="input">
+              <input
+                type="number"
+                placeholder="请输入账号"
+                value={this.state.account}
+                onChange={(e) => this.accountChange(e)}
+              />
+            </div>
+          </div>
           <div className="formItem">
             <p>手机号</p>
             <div className="input">
@@ -172,6 +190,7 @@ export default class Home extends Component {
           <button
             disabled={
               !(
+                this.state.account.length > 0 &&
                 this.state.mobile.length > 0 &&
                 this.state.code.length > 0 &&
                 this.state.password.length > 0 &&

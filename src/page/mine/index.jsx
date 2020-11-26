@@ -25,7 +25,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="main mine">
-        <div className="info" style={{backgroundImage:`url(${BgImg})`}}onClick={()=> this.infoHnadle()}>
+        <div className="info" style={{backgroundImage:`url(${BgImg})`}} onClick={()=> this.infoHnadle()}>
           <div className="img">
             <img src={Logo} alt="" />
           </div>

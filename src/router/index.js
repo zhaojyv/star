@@ -8,6 +8,11 @@ import EditMobile from '../page/editMobile/index'//修改手机号
 import EditLoginPassword from '../page/editLoginPassword/index'//修改登录密码
 import EditTradePassword from '../page/editTradePassword/index'//修改交易密码
 import Invation from '../page/invation/index'//修改交易密码
+import Login from '../page/login/index'//登录
+import Reset from '../page/reset/index'//重置密码
+import Register from '../page/register/index'//注册
+
+
 
 
 class Router extends Component {
@@ -16,6 +21,9 @@ class Router extends Component {
             <div>
                 <HashRouter>
                     <Switch>
+                        <Route path="/register" component={Register}/>
+                        <Route path="/reset" component={Reset}/>
+                        <Route path="/login" component={Login}/>
                         <Route path="/invation" component={Invation}/>
                         <Route path="/editTradePassword" component={EditTradePassword}/>
                         <Route path="/editLoginPassword" component={EditLoginPassword}/>
