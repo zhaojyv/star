@@ -13,6 +13,7 @@ import Reset from '../page/reset/index'//重置密码
 import Register from '../page/register/index'//注册
 import Charge from '../page/charge/index'//定存
 import Deposit from '../page/deposit/index'//定存
+import History from '../page/history/index'//兑换历史
 
 
 
@@ -22,6 +23,7 @@ class Router extends Component {
             <div>
                 <HashRouter>
                     <Switch>
+                        <Route path="/history" component={History}/>
                         <Route path="/charge" component={Charge}/>
                         <Route path="/deposit" component={Deposit}/>
                         <Route path="/register" component={Register}/>

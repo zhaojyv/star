@@ -1,0 +1,33 @@
+.history {
+  .list {
+    .item {
+      border-bottom: 1px solid #eeeeee;
+      padding: 15px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          font-size: 15px;
+          color: #111111;
+        }
+        .count {
+            font-weight: 500;
+          font-size: 18px;
+          color: #111111;
+        }
+        .out{
+            color: #D14C64;
+        }
+        .in{
+            color: #0AAA96;
+        }
+      }
+      .time{
+          margin-top: 6px;
+        font-size: 12px;
+        color: #999999; 
+      }
+    }
+  }
+}
