@@ -11,7 +11,8 @@ import Invation from '../page/invation/index'//修改交易密码
 import Login from '../page/login/index'//登录
 import Reset from '../page/reset/index'//重置密码
 import Register from '../page/register/index'//注册
-
+import Charge from '../page/charge/index'//定存
+import Deposit from '../page/deposit/index'//定存
 
 
 
@@ -21,6 +22,8 @@ class Router extends Component {
             <div>
                 <HashRouter>
                     <Switch>
+                        <Route path="/charge" component={Charge}/>
+                        <Route path="/deposit" component={Deposit}/>
                         <Route path="/register" component={Register}/>
                         <Route path="/reset" component={Reset}/>
                         <Route path="/login" component={Login}/>

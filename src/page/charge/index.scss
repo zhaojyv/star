@@ -1,0 +1,87 @@
+.charge {
+  .count {
+    padding: 25px;
+    color: #111111;
+    p {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .num {
+      font-size: 30px;
+      font-weight: 500;
+    }
+  }
+  .codeBox {
+    padding: 0 25px;
+    .code {
+      text-align: center;
+      padding:50px 0 25px;
+      background: #f6f7fb;
+      border-radius: 10px;
+      img {
+        width: 167px;
+        height: 167px;
+        margin: 0 auto;
+      }
+      .tip {
+        margin: 25px 0;
+        height: 40px;
+        padding: 0 20px;
+        display: inline-block;
+        line-height: 40px;
+        font-weight: 500;
+        background: rgba(2, 122, 255, 0.05);
+        border-radius: 8px;
+        color: #027aff;
+        font-size: 15px;
+        border: 2px solid rgba(2, 122, 255, 0.2);
+      }
+      button {
+        width: 60px;
+        height: 30px;
+        background: #eeeeee;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #a6b0ba;
+        line-height: 30px;
+      }
+      p {
+        font-size: 15px;
+        color: #999999;
+      }
+      .link {
+        font-size: 15px;
+        font-weight: 500;
+        margin: 5px 0 15px;
+        color: #111111;
+      }
+    }
+  }
+  .dsc {
+      margin: 15px 0 20px;
+    font-size: 12px;
+    color: #999999;
+    line-height: 20px;
+  }
+  .submit {
+    // position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    button {
+      height: 50px;
+      width: 100%;
+      line-height: 50px;
+      border-radius: 8px;
+      background: #027aff;
+      font-size: 20px;
+      color: #ffffff;
+    }
+    :disabled {
+      opacity: 0.5;
+    }
+  }
+}

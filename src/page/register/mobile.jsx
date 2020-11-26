@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./index.scss";
-import Head from "../../components/head/index";
 import EyeOpen from "../../static/img/eye_open.png";
 import EyeClose from "../../static/img/eye_close.png";
 import { testMobile } from "../../utils/index";

@@ -12,7 +12,7 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div className="main">
+      <div className="main usreInfo">
         <Head title={'个人信息'}></Head>
         <div className="list">
           <div className="item" onClick={() => this.linkHandle()}>
