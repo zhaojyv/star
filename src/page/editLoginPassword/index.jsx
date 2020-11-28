@@ -12,9 +12,12 @@ export default class Home extends Component {
       new: "",
       newConfirm: "",
       eye: [0, 0, 0],
+      pageTitle: "登录密码",
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    document.title = this.state.pageTitle;
+  }
   handleChange = (e, type) => {
     if (type === 1) {
       this.setState({
@@ -44,7 +47,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="main editLoginPassword">
-        <Head title={"登录密码"}></Head>
+       <Head title={this.state.pageTitle}></Head>
         <div className="form">
           <div className="formItem">
             <p>旧密码</p>

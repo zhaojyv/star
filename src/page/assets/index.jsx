@@ -16,10 +16,10 @@ export default class Home extends Component {
   componentDidMount() {
     document.title = this.state.pageTitle;
   }
-  infoHnadle = () => {
-    console.log("infoHnadle");
+ 
+  linkHandle = (url) => {
+    this.props.history.push(url)
   };
-  linkHandle = () => {};
   render() {
     return (
       <div className="main assets">
@@ -31,14 +31,14 @@ export default class Home extends Component {
         <div
           className="info"
           style={{ backgroundImage: `url(${BgImg})` }}
-          onClick={() => this.infoHnadle()}
+       
         >
           <div className="tip">总资产</div>
           <div className="count">52000.00</div>
           <div className="operation">
-            <button>充币</button>
-            <button>提币</button>
-            <button>兑换</button>
+            <button onClick={()=>this.linkHandle('/charge')}>充币</button>
+            <button onClick={()=>this.linkHandle('/extract')}>提币</button>
+            <button onClick={()=>this.linkHandle('/exchange')}>兑换</button>
           </div>
         </div>
         <div className="total">

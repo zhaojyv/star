@@ -7,8 +7,6 @@ import SetIcon from "../../static/img/icon_set.png";
 import JiaoyiIcon from "../../static/img/icon_jiaoyi.png";
 import YaoqingIcon from "../../static/img/icon_yaoqing.png";
 import BgImg from "../../static/img/bg.png";
-
-
 import "./index.scss";
 
 export default class Home extends Component {
@@ -16,23 +14,25 @@ export default class Home extends Component {
     super(props);
     this.state = {
       current: 0,
-      pageTitle:'我的',
+      pageTitle: "我的",
     };
   }
   componentDidMount() {
     document.title = this.state.pageTitle;
     console.log("componentDidMount-我的");
   }
-  infoHnadle = () =>{
-        console.log('infoHnadle');
-  }
-  linkHandle =()=>{
-    
-  }
+ 
+  linkHandle = (url) => {
+    this.props.history.push(url);
+  };
   render() {
     return (
       <div className="main mine">
-        <div className="info" style={{backgroundImage:`url(${BgImg})`}} onClick={()=> this.infoHnadle()}>
+        <div
+          className="info"
+          style={{ backgroundImage: `url(${BgImg})` }}
+          onClick={() => this.linkHandle("/userInfo")}
+        >
           <div className="img">
             <img src={Logo} alt="" />
           </div>
@@ -45,7 +45,7 @@ export default class Home extends Component {
           </div>
         </div>
         <div className="list">
-          <div className="item" onClick={()=>this.linkHandle()}>
+          <div className="item" onClick={() => this.linkHandle('/team')}>
             <div className="img">
               <img src={TeamIcon} alt="" />
             </div>
@@ -54,7 +54,7 @@ export default class Home extends Component {
               <img src={RightIcon} alt="" />
             </div>
           </div>
-          <div className="item" onClick={()=>this.linkHandle()}>
+          <div className="item" onClick={() => this.linkHandle("/history")}>
             <div className="img">
               <img src={JiaoyiIcon} alt="" />
             </div>
@@ -63,7 +63,7 @@ export default class Home extends Component {
               <img src={RightIcon} alt="" />
             </div>
           </div>
-          <div className="item" onClick={()=>this.linkHandle()}>
+          <div className="item" onClick={() => this.linkHandle("/invation")}>
             <div className="img">
               <img src={YaoqingIcon} alt="" />
             </div>
@@ -72,7 +72,7 @@ export default class Home extends Component {
               <img src={RightIcon} alt="" />
             </div>
           </div>
-          <div className="item" onClick={()=>this.linkHandle()}>
+          <div className="item" onClick={() => this.linkHandle("/set")}>
             <div className="img">
               <img src={SetIcon} alt="" />
             </div>

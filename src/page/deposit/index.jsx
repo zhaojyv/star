@@ -4,14 +4,19 @@ import Head from "../../components/head/index";
 import TipImg from "../../static/img/tip.png";
 
 export default class Home extends Component {
-  // 子组件声明自己需要使用 context
+  constructor(props) {
+    super(props);
+    this.state = {
+      pageTitle: "定存",
+    };
+  }
   componentDidMount() {
-    console.log("componentDidMount-首页");
+    document.title = this.state.pageTitle;
   }
   render() {
     return (
       <div className="main deposit">
-        <Head title={"定存"}></Head>
+        <Head title={this.state.pageTitle}></Head>
         <div className="count">
           <p>余额</p>
           <div className="num">42.44000000XT</div>

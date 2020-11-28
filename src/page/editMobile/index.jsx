@@ -6,10 +6,11 @@ export default class Home extends Component {
     super(props);
     this.state = {
       mobile: '',
+      pageTitle: "手机号",
     };
   }
   componentDidMount() {
-    
+    document.title = this.state.pageTitle;
   }
   handleChange =(e)=>{
         this.setState({
@@ -19,7 +20,7 @@ export default class Home extends Component {
   render() {
     return (
         <div className="main editMobile">
-          <Head title={'手机号'}></Head>
+          <Head title={this.state.pageTitle}></Head>
           <div className="form">
             <div className="formItem">
                 <p>修改昵称</p>

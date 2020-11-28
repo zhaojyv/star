@@ -4,7 +4,7 @@ import Head from "../../components/head/index";
 import EyeOpen from "../../static/img/eye_open.png";
 import EyeClose from "../../static/img/eye_close.png";
 import { testMobile } from "../../utils/index";
-let  time = null
+let time = null;
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -17,10 +17,12 @@ export default class Home extends Component {
       num: 60,
       time: null,
       send: false,
-      
+      pageTitle: "交易密码",
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    document.title = this.state.pageTitle;
+  }
   mobileChange = (e) => {
     this.setState({
       mobile: e.target.value,
@@ -62,13 +64,12 @@ export default class Home extends Component {
       });
       time = setInterval(() => {
         if (num < 0) {
-          clearInterval(time)
+          clearInterval(time);
           this.setState({
             num: 60,
-            send:false,
-            time:null
+            send: false,
+            time: null,
           });
-          
         } else {
           this.setState({
             num: num--,
@@ -80,7 +81,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="main editTradePassword">
-        <Head title={"交易密码"}></Head>
+        <Head title={this.state.pageTitle}></Head>
         <div className="form">
           <div className="formItem">
             <p>手机号</p>

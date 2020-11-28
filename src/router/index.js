@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {HashRouter,Switch,Route } from "react-router-dom";//引入routerdom
+import {BrowserRouter ,Switch,Route } from "react-router-dom";//引入routerdom
 
 import Index from '../page/index/index' //首页
 import UserInfo from '../page/userInfo/index'//个人信息
@@ -17,14 +17,18 @@ import History from '../page/history/index'//兑换历史
 import Record from '../page/record/index'//记录
 import Extract from '../page/extract/index'//兑换历史
 import Exchange from '../page/exchange/index'//兑换
+import Set from '../page/set/index'//设置
+import Team from '../page/team/index'//团队
 
 
-class Router extends Component {
+class RouterMap extends Component {
     render() {
         return (
             <div>
-                <HashRouter>
+                <BrowserRouter>
                     <Switch>
+                        <Route path="/team" component={Team}/>
+                        <Route path="/set" component={Set}/>
                         <Route path="/exchange" component={Exchange}/>
                         <Route path="/extract" component={Extract}/>
                         <Route path="/record" component={Record}/>
@@ -42,10 +46,10 @@ class Router extends Component {
                         <Route path="/userInfo" component={UserInfo}/>
                         <Route path="/" component={Index}/>
                     </Switch>
-                </HashRouter>
+                </BrowserRouter>
             </div>
         );
     }
 }
 
-export default Router;
+export default RouterMap;

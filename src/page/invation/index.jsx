@@ -15,16 +15,17 @@ export default class Home extends Component {
       eye: [0, 0],
       num: 10,
       time: null,
+      pageTitle: "邀请好友",
       send: false,
     };
   }
   componentDidMount() {
-    console.log("componentDidMount-首页");
+    document.title = this.state.pageTitle;
   }
   render() {
     return (
       <div className="main invation">
-        <Head title={"邀请好友"}></Head>
+        <Head title={this.state.pageTitle}></Head>
         <div className="title">邀请好友</div>
         <div className="code">
           <img src={CodeImg} alt="" />

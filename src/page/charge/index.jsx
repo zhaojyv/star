@@ -4,14 +4,20 @@ import Head from "../../components/head/index";
 import CodeImg from "../../static/img/code.png";
 
 export default class Home extends Component {
-  // 子组件声明自己需要使用 context
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: 0,
+      pageTitle: "充币",
+    };
+  }
   componentDidMount() {
-    console.log("componentDidMount-首页");
+    document.title = this.state.pageTitle;
   }
   render() {
     return (
       <div className="main charge">
-        <Head title={"定存"}></Head>
+        <Head title={this.state.pageTitle}></Head>
         <div className="count">
           <p>充值币种</p>
           <div className="num">USDT</div>

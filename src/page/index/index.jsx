@@ -21,7 +21,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 2,
+      selectedTab: 1,
       hidden: false,
       fullScreen: false,
       bar: [
@@ -56,6 +56,7 @@ class Index extends React.Component {
     this.setState({
       selectedTab: id,
     });
+    localStorage.setItem('tab',id)
   };
   render() {
     let CurrentBox = null;
@@ -71,7 +72,7 @@ class Index extends React.Component {
     return (
       <div className="main">
         <div className="tanContent">
-          <CurrentBox></CurrentBox>
+          <CurrentBox  history={this.props.history}></CurrentBox>
         </div>
         <div className="bar">
           {this.state.bar.map((item, index) => {

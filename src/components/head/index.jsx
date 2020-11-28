@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import { Icon } from 'antd-mobile';
+import { Icon } from "antd-mobile";
+import { createBrowserHistory } from 'history'
 import "./index.scss";
+const history = createBrowserHistory();
 export default class Home extends Component {
   constructor(props) {
     super(props);
@@ -35,20 +37,42 @@ export default class Home extends Component {
       });
     }
   }
+  back = () => {
+    history.go(-1)
+  };
   render() {
     return (
       <div className="headBox">
-        <div className="head" style={{backgroundColor:this.props.bgColor?this.props.bgColor:'#ffffff'}} >
-          <div className="back">
-            {this.state.hideBack ? "" : <Icon type="left" style={{color:this.props.color?this.props.color:'##000000'}} size={'md'}/>}
+        <div
+          className="head"
+          style={{
+            backgroundColor: this.props.bgColor
+              ? this.props.bgColor
+              : "#ffffff",
+          }}
+        >
+          <div className="back" onClick={() => this.back()}>
+            {this.state.hideBack ? (
+              ""
+            ) : (
+              <Icon
+                type="left"
+                style={{
+                  color: this.props.color ? this.props.color : "##000000",
+                }}
+                size={"md"}
+              />
+            )}
           </div>
-          <div className="title" style={{color:this.props.color?this.props.color:'##000000'}}>{this.state.title}</div>
+          <div
+            className="title"
+            style={{ color: this.props.color ? this.props.color : "##000000" }}
+          >
+            {this.state.title}
+          </div>
           <div className="right"></div>
         </div>
-        {
-          this.props.bgColor?'':<div className="headContent"></div>
-        }
-        
+        {this.props.bgColor ? "" : <div className="headContent"></div>}
       </div>
     );
   }

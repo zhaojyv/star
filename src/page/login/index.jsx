@@ -27,8 +27,12 @@ export default class Home extends Component {
       eye: eye,
     });
   };
-  register = () => {};
-  forget = () => {};
+  register = () => {
+    this.props.history.push('/register');
+  };
+  forget = () => {
+    this.props.history.push('/reset');
+  };
   mobileChange = (e) => {
     this.setState({
       mobile: e.target.value,
