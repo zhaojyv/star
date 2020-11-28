@@ -6,38 +6,36 @@
         .bg{
             width: 100%;
             height: auto;
-            border-bottom-left-radius: 50px;
-            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 1.333333rem;
+            border-bottom-right-radius: 1.333333rem;
 
         }
         .logo{
-            width: 165px;
-            height: 53px;
+            width: 16 0.133333rem;
+            height: 50.08rem;
             z-index: 2;
             position: absolute;
             top: 40%;
             left: 50%;
             transform: translate(-50%,-50%);
-            // border-bottom-left-radius:180px ;
-            // border-bottom-right-radius:180px ;
 
         }
     }
     .content{
-        margin-top: -40px;
-        padding: 0 15px;
+        margin-top: -1.066667rem;
+        padding: 0 0.4rem;
         position: relative;
         
     }
     .form {
         background: #ffffff;
-        padding: 40px 15px;
-        border-radius: 10px;
+        padding: 1.066667rem 0.4rem;
+        border-radius: 0.266667rem;
         .formItem {
-          padding-top: 20px;
-          border-bottom: 2px solid #eeeeee;
+          padding-top:  0.533333rem;
+          border-bottom:  0.053333rem solid #eeeeee;
           p {
-            font-size: 15px;
+            font-size: 0.4rem;
             color: #111111;
             font-weight: bold;
           }
@@ -45,33 +43,33 @@
             position: relative;
             input {
               width: 100%;
-              padding-right: 56px;
+              padding-right:  1.493333rem;
               box-sizing: border-box;
-              height: 56px;
-              line-height: 56px;
-              font-size: 20px;
+              height:  1.493333rem;
+              line-height:  1.493333rem;
+              font-size:  0.533333rem;
             }
             .icon {
               position: absolute;
               height: 100%;
               right: 0;
-              width: 22px;
-              padding:0 15px;
+              width: 2 0.053333rem;
+              padding:0 0.4rem;
               z-index: 2;
               top: 50%;
               transform: translateY(-50%);
               display: flex;
               align-items: center;
               img {
-                width: 22px;
-                height: 15px;
+                width: 2 0.053333rem;
+                height: 0.4rem;
               }
             }
             .code {
               position: absolute;
               height: 100%;
               right: 0;
-              padding:0 15px;
+              padding:0 0.4rem;
               z-index: 2;
               top: 50%;
               transform: translateY(-50%);
@@ -80,30 +78,30 @@
               button {
                 height: 100%;
                 background: transparent;
-                font-size:18px ;
+                font-size:0.48rem ;
                 color: #999999;
               }
             }
           }
         }
         .operation{
-            margin: 25px 0;
+            margin: 0.666667rem 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 16px;
+            font-size: 0.426667rem;
             color: #333333;
         }
         .submit {
             width: 100%;
             box-sizing: border-box;
             button {
-              height: 50px;
+              height: 1.333333rem;
               width: 100%;
-              line-height: 50px;
-              border-radius: 8px;
+              line-height: 1.333333rem;
+              border-radius:  0.213333rem;
               background: #027aff;
-              font-size: 20px;
+              font-size:  0.533333rem;
               color: #ffffff;
             }
             :disabled {

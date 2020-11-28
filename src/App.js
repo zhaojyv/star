@@ -1,4 +1,5 @@
 import 'antd-mobile/dist/antd-mobile.css';
+import "lib-flexible"
 
 import "./App.css";
 import RouterMap from "./router";

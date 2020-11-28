@@ -5,67 +5,67 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 35px 15px 55px;
+    padding: 0.933333rem 0.4rem 1.466667rem;
     .img {
       img {
-        width: 60px;
-        height: 60px;
-        border-radius: 33px;
-        border: 3px solid rgba($color: #ffffff, $alpha: 0.5);
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 30.08rem;
+        border: 0.08rem solid rgba($color: #ffffff, $alpha: 0.5);
       }
     }
     .name {
       flex: 1;
       text-align: left;
       color: #ffffff;
-      margin-left: 15px;
+      margin-left: 0.4rem;
       .nickName {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 0.666667rem;
+        margin-bottom: 0.266667rem;
       }
       .phone {
-        font-size: 18px;
+        font-size: 0.48rem;
         opacity: 0.5;
       }
     }
   }
   .list {
-      margin-top: -20px;
-      padding: 20px 25px 0;
-      border-top-right-radius: 30px;
-      border-top-left-radius: 30px;
+      margin-top: - 0.533333rem;
+      padding:  0.533333rem 0.666667rem 0;
+      border-top-right-radius: 0.8rem;
+      border-top-left-radius: 0.8rem;
       position: relative;
       background-color: #ffffff;
       z-index: 2;
 
     .item {
-      height: 60px;
-      line-height: 60px;
+      height: 1.6rem;
+      line-height: 1.6rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #eeeeee;
-    //   padding: 0 25px;
+    //   padding: 0 0.666667rem;
       .img {
-        width: 26px;
-        height: 26px;
+        width: 0.693333rem;
+        height: 0.693333rem;
         img {
-          width: 26px;
-          height: 26px;
+          width: 0.693333rem;
+          height: 0.693333rem;
         }
       }
       .text{
           flex: 1;
-          padding: 0 15px;
+          padding: 0 0.4rem;
           color: #111111;
-          font-size: 15px;
+          font-size: 0.4rem;
       }
       .icon {
-        width: 16px;
-        height: 16px;
+        width: 0.426667rem;
+        height: 0.426667rem;
         img {
-          width: 16px;
-          height: 16px;
+          width: 0.426667rem;
+          height: 0.426667rem;
         }
       }
     }

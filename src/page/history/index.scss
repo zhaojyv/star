@@ -2,18 +2,18 @@
   .list {
     .item {
       border-bottom: 1px solid #eeeeee;
-      padding: 15px;
+      padding: 0.4rem;
       .top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         span {
-          font-size: 15px;
+          font-size: 0.4rem;
           color: #111111;
         }
         .count {
             font-weight: 500;
-          font-size: 18px;
+          font-size: 0.48rem;
           color: #111111;
         }
         .out{
@@ -24,8 +24,8 @@
         }
       }
       .time{
-          margin-top: 6px;
-        font-size: 12px;
+          margin-top: 0.16rem;
+        font-size:  0.32rem;
         color: #999999; 
       }
     }

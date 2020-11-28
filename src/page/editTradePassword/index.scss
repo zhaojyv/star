@@ -1,11 +1,11 @@
 .editTradePassword {
   .form {
-    padding: 0 15px;
+    padding: 0 0.4rem;
     .formItem {
-      padding-top: 20px;
-      border-bottom: 2px solid #eeeeee;
+      padding-top:  0.533333rem;
+      border-bottom:  0.053333rem solid #eeeeee;
       p {
-        font-size: 15px;
+        font-size: 0.4rem;
         color: #111111;
         font-weight: bold;
       }
@@ -13,33 +13,33 @@
         position: relative;
         input {
           width: 100%;
-          padding-right: 56px;
+          padding-right:  1.493333rem;
           box-sizing: border-box;
-          height: 56px;
-          line-height: 56px;
-          font-size: 20px;
+          height:  1.493333rem;
+          line-height:  1.493333rem;
+          font-size:  0.533333rem;
         }
         .icon {
           position: absolute;
           height: 100%;
           right: 0;
-          width: 22px;
-          padding:0 15px;
+          width: 2 0.053333rem;
+          padding:0 0.4rem;
           z-index: 2;
           top: 50%;
           transform: translateY(-50%);
           display: flex;
           align-items: center;
           img {
-            width: 22px;
-            height: 15px;
+            width: 2 0.053333rem;
+            height: 0.4rem;
           }
         }
         .code {
           position: absolute;
           height: 100%;
           right: 0;
-          padding:0 15px;
+          padding:0 0.4rem;
           z-index: 2;
           top: 50%;
           transform: translateY(-50%);
@@ -48,7 +48,7 @@
           button {
             height: 100%;
             background: transparent;
-            font-size:18px ;
+            font-size:0.48rem ;
             color: #999999;
           }
         }
@@ -62,15 +62,15 @@
     width: 100%;
     left: 0;
     z-index: 1;
-    padding: 15px 25px;
+    padding: 0.4rem 0.666667rem;
     box-sizing: border-box;
     button {
-      height: 50px;
+      height: 1.333333rem;
       width: 100%;
-      line-height: 50px;
-      border-radius: 8px;
+      line-height: 1.333333rem;
+      border-radius:  0.213333rem;
       background: #027aff;
-      font-size: 20px;
+      font-size:  0.533333rem;
       color: #ffffff;
     }
     :disabled {

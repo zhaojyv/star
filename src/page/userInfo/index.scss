@@ -1,65 +1,65 @@
 .usreInfo {
   .list {
-    margin-top: -20px;
-    padding: 20px 15px 0;
-    border-top-right-radius: 30px;
-    border-top-left-radius: 30px;
+    margin-top: - 0.533333rem;
+    padding:  0.533333rem 0.4rem 0;
+    border-top-right-radius: 0.8rem;
+    border-top-left-radius: 0.8rem;
     position: relative;
     background-color: #ffffff;
     z-index: 2;
 
     .item {
-      height: 60px;
-      line-height: 60px;
+      height: 1.6rem;
+      line-height: 1.6rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #eeeeee;
-      //   padding: 0 25px;
+      //   padding: 0 0.666667rem;
       .img {
-        width: 26px;
-        height: 26px;
+        width: 0.693333rem;
+        height: 0.693333rem;
         img {
-          width: 26px;
-          height: 26px;
+          width: 0.693333rem;
+          height: 0.693333rem;
         }
       }
       .text {
         flex: 1;
-        padding: 0 15px 0 0;
+        padding: 0 0.4rem 0 0;
         color: #111111;
-        font-size: 15px;
+        font-size: 0.4rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         .right {
           color: #999999;
           img {
-            width: 28px;
-            border-radius: 14px;
-            height: 28px;
+            width: 0.746667rem;
+            border-radius: 0.373333rem;
+            height:0.746667rem;
           }
         }
       }
       .icon {
-        width: 16px;
-        height: 16px;
+        width: 0.426667rem;
+        height: 0.426667rem;
         img {
-          width: 16px;
-          height: 16px;
+          width: 0.426667rem;
+          height: 0.426667rem;
         }
       }
     }
   }
   .cancel {
-    padding: 25px 15px;
+    padding: 0.666667rem 0.4rem;
     button {
-      height: 50px;
+      height: 1.333333rem;
       width: 100%;
-      line-height: 50px;
-      border-radius: 8px;
+      line-height: 1.333333rem;
+      border-radius:  0.213333rem;
       background: #f6f7fb;
-      font-size: 15px;
+      font-size: 0.4rem;
       color: #666666;
     }
   }

@@ -1,36 +1,36 @@
 .head {
   position: fixed;
-  height: 48px;
-  line-height: 48px;
+  height: 1.28rem;
+  line-height: 1.28rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 15px;
+  padding: 0 0.4rem;
   z-index: 9;
   background: #ffffff;
   top: 0;
   left: 0;
   right: 0;
   .back {
-    width: 20px;
+    width:  0.533333rem;
     img {
-      width: 20px;
-      height: 20px;
+      width:  0.533333rem;
+      height:  0.533333rem;
     }
   }
   .title {
     text-align: center;
-    font-size: 18px;
+    font-size: 0.48rem;
     color: #000000;
     font-weight: 600;
   }
   .right {
-    width: 20px;
+    width:  0.533333rem;
     height: 100%;
   }
 }
 .headContent {
-  height: 48px;
+  height: 1.28rem;
   width: 100%;
 }

@@ -1,41 +1,41 @@
 .invation {
-  padding: 0 25px;
+  padding: 0 0.666667rem;
   .title {
     color: #111111;
-    font-size: 15px;
-    padding: 15px 0 25px;
+    font-size: 0.4rem;
+    padding: 0.4rem 0 0.666667rem;
   }
   .code {
     text-align: center;
-    padding: 25px 0;
+    padding: 0.666667rem 0;
     background: #f6f7fb;
-    border-radius: 10px;
+    border-radius: 0.266667rem;
     img {
-      width: 167px;
-      height: 167px;
+      width:  4.453333rem;
+      height:  4.453333rem;
       margin: 0 auto;
     }
     .tip {
-      margin: 25px 0;
-      height: 40px;
-      padding: 0 20px;
+      margin: 0.666667rem 0;
+      height: 1.066667rem;
+      padding: 0  0.533333rem;
       display: inline-block;
-      line-height: 40px;
+      line-height: 1.066667rem;
       font-weight: 500;
       background: rgba(2, 122, 255, 0.05);
-      border-radius: 8px;
+      border-radius:  0.213333rem;
       color: #027aff;
-      font-size: 15px;
-      border: 2px solid rgba(2, 122, 255, 0.2);
+      font-size: 0.4rem;
+      border:  0.053333rem solid rgba(2, 122, 255, 0.2);
     }
     button {
-      width: 60px;
-      height: 30px;
+      width: 1.6rem;
+      height: 0.8rem;
       background: #eeeeee;
-      border-radius: 5px;
-      font-size: 14px;
+      border-radius:  0.133333rem;
+      font-size: 10.106667rem;
       color: #a6b0ba;
-      line-height: 30px;
+      line-height: 0.8rem;
     }
   }
 }
