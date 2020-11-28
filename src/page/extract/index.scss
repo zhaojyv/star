@@ -1,0 +1,128 @@
+.extract {
+  .tip {
+    padding: 0.666667rem;
+    span {
+      display: block;
+      color: #111111;
+      font-size: 0.4rem;
+    }
+    .name {
+      margin-top: 0.186667rem;
+      color: #111111;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .info {
+      padding: 0.533333rem;
+      border-radius: 0.266667rem;
+      background: #f6f7fb;
+      margin-top: 0.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .total {
+        flex: 1;
+        .text {
+          color: #999999;
+          font-size: 0.4rem;
+        }
+        .count {
+          display: flex;
+          align-items: flex-end;
+          font-weight: 500;
+          margin-top: 5px;
+          color: #111111;
+          font-size: 0.533333rem;
+          i {
+            font-size: 0.4rem;
+            margin-left: 0.133333rem;
+            display: block;
+            font-style: normal;
+          }
+        }
+      }
+      .btn {
+        button {
+          height: 1.066667rem;
+          font-size: 0.4rem;
+          color: #027aff;
+          padding: 0 15px;
+          background: rgba(2, 122, 255, 0.05);
+          border-radius: 0.186667rem;
+          border: 1px solid rgba(2, 122, 255, 0.2);
+        }
+      }
+    }
+  }
+  .form {
+    padding: 0 0.666667rem;
+    margin-bottom: 1.333333rem;
+    .formItem {
+      padding-top: 0.533333rem;
+      border-bottom: 0.053333rem solid #eeeeee;
+      p {
+        font-size: 0.4rem;
+        color: #111111;
+        font-weight: bold;
+      }
+      .input {
+        position: relative;
+        input {
+          width: 100%;
+          padding-right: 1.493333rem;
+          box-sizing: border-box;
+          height: 1.493333rem;
+          line-height: 1.493333rem;
+          font-size: 0.533333rem;
+        }
+        textarea {
+          width: 100%;
+          padding-bottom: 0.4rem;
+          box-sizing: border-box;
+          // height:  1.493333rem;
+          line-height: 0.746667rem;
+          font-size: 0.533333rem;
+          margin-top: 0.4rem;
+        }
+        .icon {
+          position: absolute;
+          height: 100%;
+          right: 0;
+          width: 2 0.053333rem;
+          padding: 0 0.4rem;
+          z-index: 2;
+          top: 50%;
+          transform: translateY(-50%);
+          display: flex;
+          align-items: center;
+          img {
+            width: 2 0.053333rem;
+            height: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  .submit {
+    // position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    padding: 0.4rem 0.666667rem;
+    box-sizing: border-box;
+    button {
+      height: 1.333333rem;
+      width: 100%;
+      line-height: 1.333333rem;
+      border-radius: 0.213333rem;
+      background: #027aff;
+      font-size: 0.533333rem;
+      color: #ffffff;
+    }
+    :disabled {
+      opacity: 0.5;
+    }
+  }
+}

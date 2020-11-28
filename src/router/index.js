@@ -14,8 +14,9 @@ import Register from '../page/register/index'//注册
 import Charge from '../page/charge/index'//定存
 import Deposit from '../page/deposit/index'//定存
 import History from '../page/history/index'//兑换历史
-import Record from '../page/record/index'//兑换历史
-
+import Record from '../page/record/index'//记录
+import Extract from '../page/extract/index'//兑换历史
+import Exchange from '../page/exchange/index'//兑换
 
 
 class Router extends Component {
@@ -24,7 +25,9 @@ class Router extends Component {
             <div>
                 <HashRouter>
                     <Switch>
-                    <Route path="/record" component={Record}/>
+                        <Route path="/exchange" component={Exchange}/>
+                        <Route path="/extract" component={Extract}/>
+                        <Route path="/record" component={Record}/>
                         <Route path="/history" component={History}/>
                         <Route path="/charge" component={Charge}/>
                         <Route path="/deposit" component={Deposit}/>

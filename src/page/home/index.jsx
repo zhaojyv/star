@@ -33,11 +33,9 @@ export default class Home extends Component {
       ],
     };
   }
-  componentWillMount(){
-    document.title = this.state.pageTitle;
-  }
+ 
   componentDidMount() {
-    
+    document.title = this.state.pageTitle;
   }
   tabChange = (key) => {
     if (key === this.state.current) {
