@@ -21,6 +21,8 @@ export default class Home extends Component {
     super(props);
     this.state = {
       current: 0,
+      pageTitle: "首页",
+
       tab: [
         { title: "USDT", key: 0 },
         { title: "HUSD", key: 1 },
@@ -31,12 +33,15 @@ export default class Home extends Component {
       ],
     };
   }
+  componentWillMount(){
+    document.title = this.state.pageTitle;
+  }
   componentDidMount() {
-    console.log("componentDidMount-首页");
+    
   }
   tabChange = (key) => {
-    if(key === this.state.current){
-      return
+    if (key === this.state.current) {
+      return;
     }
     this.setState({
       current: key,

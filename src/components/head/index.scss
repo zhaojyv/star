@@ -13,20 +13,19 @@
   left: 0;
   right: 0;
   .back {
-    width:  0.533333rem;
-    img {
-      width:  0.533333rem;
-      height:  0.533333rem;
-    }
+    width:  36Px;
+    display: flex;
+    align-items: center;
+    
   }
   .title {
     text-align: center;
     font-size: 0.48rem;
     color: #000000;
-    font-weight: 600;
+    font-weight: bold;
   }
   .right {
-    width:  0.533333rem;
+    width: 36Px;
     height: 100%;
   }
 }

@@ -12,8 +12,15 @@ import BgImg from "../../static/img/bg.png";
 import "./index.scss";
 
 export default class Home extends Component {
-  // 子组件声明自己需要使用 context
+  constructor(props) {
+    super(props);
+    this.state = {
+      current: 0,
+      pageTitle:'我的',
+    };
+  }
   componentDidMount() {
+    document.title = this.state.pageTitle;
     console.log("componentDidMount-我的");
   }
   infoHnadle = () =>{

@@ -21,7 +21,7 @@ class Index extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 1,
+      selectedTab: 2,
       hidden: false,
       fullScreen: false,
       bar: [

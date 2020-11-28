@@ -8,6 +8,7 @@ export default class Home extends Component {
     super(props);
     this.state = {
       current: 0,
+      pageTitle:'兑换历史',
       tab: [
         { title: "全部", key: 0 },
         { title: "充币", key: 1 },
@@ -18,6 +19,7 @@ export default class Home extends Component {
     };
   }
   componentDidMount() {
+    document.title = this.state.pageTitle;
     console.log("componentDidMount-首页");
   }
   tabChange = (key) => {
@@ -31,7 +33,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="main record">
-        <Head title={"兑换历史"} hideBack={true}></Head>
+        <Head title={this.state.pageTitle} hideBack={true}></Head>
         <div className="tab">
           <div className="list">
             {this.state.tab.map((item, index) => {

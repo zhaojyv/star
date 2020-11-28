@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import BackIcon from "../../static/img/back.png";
+import { Icon } from 'antd-mobile';
 import "./index.scss";
 export default class Home extends Component {
   constructor(props) {
@@ -7,6 +7,7 @@ export default class Home extends Component {
     this.state = {
       title: "",
       hideBack: false,
+      bgColor: "#ffffff",
     };
   }
   componentDidMount() {
@@ -17,24 +18,37 @@ export default class Home extends Component {
     this.setState({
       title: title,
     });
-    console.log(this.props.hideBack);
+    document.title = title;
     if (this.props.hideBack) {
       this.setState({
         hideBack: true,
+      });
+    }
+    if (this.props.bgColor) {
+      this.setState({
+        bgColor: this.props.bgColor,
+      });
+    }
+    if (this.props.color) {
+      this.setState({
+        color: this.props.bgColor,
       });
     }
   }
   render() {
     return (
       <div className="headBox">
-        <div className="head">
+        <div className="head" style={{backgroundColor:this.props.bgColor?this.props.bgColor:'#ffffff'}} >
           <div className="back">
-            {this.state.hideBack ? "" : <img src={BackIcon} alt="" />}
+            {this.state.hideBack ? "" : <Icon type="left" style={{color:this.props.color?this.props.color:'##000000'}} size={'md'}/>}
           </div>
-          <div className="title">{this.state.title}</div>
+          <div className="title" style={{color:this.props.color?this.props.color:'##000000'}}>{this.state.title}</div>
           <div className="right"></div>
         </div>
-        <div className="headContent"></div>
+        {
+          this.props.bgColor?'':<div className="headContent"></div>
+        }
+        
       </div>
     );
   }

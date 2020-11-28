@@ -1,0 +1,102 @@
+.assets {
+  .info {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 8.68rem;
+    box-sizing: border-box;
+    padding: 1.866667rem 0.4rem 1.466667rem;
+    text-align: center;
+    // background: #027AFF;
+    .tip {
+      font-size: 0.4rem;
+      color: #fefefe;
+      margin-bottom: 0.266667rem;
+    }
+    .count {
+      font-size: 1.066667rem;
+      color: #ffffff;
+      margin-bottom: 0.666667rem;
+    }
+    .operation {
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        flex: 1;
+        height: 0.933333rem;
+        font-size: 0.4rem;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 0.186667rem;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      button:nth-child(2) {
+        margin: 0 0.4rem;
+      }
+    }
+  }
+  .total {
+    margin-top: -2.333333rem;
+    padding: 0.666667rem;
+    border-top-right-radius: 0.933333rem;
+    border-top-left-radius: 0.933333rem;
+    position: relative;
+    background-color: #ffffff;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 0.133333rem solid #f6f7fb;
+    .count {
+      text-align: center;
+      span {
+        display: block;
+        color: #999999;
+        font-size: 0.4rem;
+        margin-bottom: 7px;
+      }
+      p {
+        font-weight: bold;
+        color: #111111;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .list {
+      padding-bottom: 0.8rem;
+    .item {
+      padding: 0.4rem;
+      border-bottom: 1px solid #eeeeee;
+      .title {
+        color: #027aff;
+        font-size: 0.533333rem;
+        margin-bottom: 0.4rem;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .part {
+          label {
+            display: block;
+            color: #cccccc;
+            font-size: 0.4rem;
+            margin-bottom: 0.186667rem;
+          }
+          p {
+            color: #111111;
+            font-size: 0.453333rem;
+            font-weight: bold;
+          }
+        }
+        .center {
+          flex: 1;
+        }
+        .part:first-child{
+            width: 3.2rem;
+        }
+      }
+    }
+  }
+}
