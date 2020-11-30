@@ -8,7 +8,7 @@ export default class Home extends Component {
     super(props);
     this.state = {
       current: 0,
-      pageTitle:'兑换历史',
+      pageTitle:'交易记录',
       tab: [
         { title: "全部", key: 0 },
         { title: "充币", key: 1 },

@@ -19,7 +19,6 @@ export default class Home extends Component {
   }
   componentDidMount() {
     document.title = this.state.pageTitle;
-    console.log("componentDidMount-我的");
   }
  
   linkHandle = (url) => {
